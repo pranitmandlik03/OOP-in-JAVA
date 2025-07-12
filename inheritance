@@ -1,0 +1,45 @@
+# java-mini-projects
+learn the core
+class mydata
+{
+    int a,b;
+    void setdata()
+    {
+        a=10;
+        b=20;
+
+    }
+    void display()
+    {
+        System.out.println("The first number= "+a);
+        System.out.println("The second number is= "+b);     
+
+    }
+}
+class myresult extends mydata
+{
+    int add, sub;
+ 
+    void find_result()
+    {
+        setdata();
+        display();
+        add=a+b;
+        sub=a-b;
+    }
+    void print_result()
+    {
+        System.out.println("Addition= "+add);
+        System.out.println("Substraction= "+sub);
+    }
+}
+public class mcdemo3 
+{
+    public static void main(String args[])
+    {
+        myresult obj=new myresult();       
+        obj.find_result();
+        obj.print_result();
+    }
+    
+}
