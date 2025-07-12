@@ -1,0 +1,47 @@
+class setdata
+{
+    int a,b;
+    void setdata()
+    {        
+        a=10;
+        b=20;
+    }
+    void readdata()
+    {
+        System.out.println("Value of the A= "+a);
+        System.out.println("The value of the b= "+b);
+    }
+}
+class add extends setdata
+{
+    int sum;
+    void addition()
+    {
+         setdata();
+        readdata();        
+        sum=a+b;
+        System.out.println("Add="+sum);
+    }
+}
+class Substraction extends setdata
+{
+    void minus()
+    {
+      setdata();
+        int sub;
+        sub=a-b;
+        System.out.println("Sub="+sub);
+    
+    }
+}
+public class hidemo 
+{
+    public static void main(String[] args) 
+    {
+      add obj1=new add();
+      obj1.addition();  
+      Substraction obj2=new Substraction();
+      obj2.minus();   
+    }
+
+}
