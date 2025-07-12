@@ -1,0 +1,42 @@
+//made in VS code IDE
+
+class data
+{
+    int a,b;
+    void setdata()
+    {
+        a=10;
+        b=20;
+    }
+    void display()
+    {
+        System.out.println("First number= "+a);
+        System.out.println("Second number= "+b);        
+    }
+}
+class operate extends data
+{
+    int add,sub; 
+    void add()
+    {   
+        setdata();
+        super.display();
+        add=a+b;
+        sub=a-b;
+     display();
+    }
+    void display()
+    {
+        System.out.println("Addition of both the numbers= "+add);
+        System.out.println("Substraction of the both numbers= "+sub);
+    }
+}
+public class overriding
+{
+    public static void main(String[] args) 
+    {
+        operate obj=new operate();
+        obj.add();
+        
+    }
+}
