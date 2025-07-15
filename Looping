@@ -1,0 +1,29 @@
+import java.io.*;
+class loop3
+{
+    public static void main(String[] args) 
+    {
+    try
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the value of n");
+        int n;
+        n=Integer.parseInt(br.readLine());
+        int num=1,c;
+        for(c=0;c<=n;c++)
+        {
+            System.out.print(num+"\t");
+            num=num+10*c;
+        }
+
+     
+    }
+    catch(IOException e)
+    {
+        System.out.println("There was an a exeption occured");
+
+    }
+       
+        
+    }
+}
