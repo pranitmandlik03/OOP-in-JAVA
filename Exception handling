@@ -1,0 +1,44 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class nested2 
+{
+    public static void main(String[] args) {
+        
+    int a,b,c,add;
+    double avg;
+    Scanner sc=new Scanner(System.in);
+    try
+    {
+        System.out.println("Enter the value of three integer ");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+    }
+    catch(InputMismatchException e1)
+    {
+        System.out.println("Wrong value of the integer entered");
+        System.out.println("Re-enter the value");
+     try
+      {
+        Scanner sc2=new Scanner(System.in);
+        a=sc2.nextInt();
+        b=sc2.nextInt();
+        c=sc2.nextInt();
+
+      } 
+    catch(InputMismatchException e2)   
+    {
+        System.out.println("The entered values are wrong again");
+        System.out.println("Hence default values are passed");
+        a=10;
+        b=20;
+        c=30;
+    }
+    }
+     add=a+b+c;
+     avg=(double)add/3;
+     System.out.println("Addition="+add);
+     System.out.println("Avg="+avg);
+    
+}
+}
