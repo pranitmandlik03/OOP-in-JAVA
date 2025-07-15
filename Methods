@@ -1,0 +1,34 @@
+import java.util.Scanner;
+class lolli
+{
+    int a,b,sum,sub;
+    void read()
+    {
+        System.out.println("Enter the numbers for add and sub");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the value for A: ");
+        a=sc.nextInt();
+        System.out.println("Enter the value for B: ");
+        b=sc.nextInt();
+    }
+    void calc()
+    {
+        read();   // above read method called in calc method
+        sum=a+b;
+        sub=a-b;
+        display();  //below display method called in calc method
+    }
+    void display()
+    {
+        System.out.println("Addition="+sum);
+        System.out.println("Substraction="+sub);
+    }
+}
+  public class NestedMethod
+{
+    public static void main(String[] args) {
+        lolli obj=new lolli();
+        obj.calc();
+
+    }
+}
