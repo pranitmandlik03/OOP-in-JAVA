@@ -1,0 +1,76 @@
+
+
+//Runtime polymorphism
+import java.util.Scanner;
+class student
+{
+    void result(int n)
+    {
+        System.out.println("Cheking odd even");
+        System.out.println("The number is= "+n);
+        if(n%2==0)
+        {
+            System.out.println("Number is even");
+
+        }
+        else 
+        System.out.println("Number is odd");
+    }
+    void result(int a, int b)
+    {
+        int add,sub;
+        System.out.println("Finding Addition and average");
+        System.out.println("The numbers that are entered are= "+a+" "+b);
+         add=a+b;
+         sub=a-b;
+        System.out.println("Addition= "+add);
+        System.out.println("Substraction= "+sub);
+    }
+    void result(int x, int y, int z)
+    {
+        int add;
+        double avg;
+        System.out.println("Finding Adition and average of the three numbers");
+        System.out.println("Thenumbers are= "+x+" "+y+" "+z);
+        add=x+y+z;
+        avg=(double)add/3;
+        System.out.println("Addition of the threee numbers= "+add);
+        System.out.println("Average of the three numbers is= "+avg);
+
+    }
+
+}
+public class polydemo4
+{
+    public static void main(String args[])
+    {
+        student obj=new student();
+
+       Scanner sc=new Scanner(System.in);
+       int n,num1,num2,num3;
+       System.out.println("Please enter that how many parameters you are going to enter");
+       n=sc.nextInt();
+       if (n==1)
+       {
+        System.out.println("Enter any one number for finding even odd");
+       int num=sc.nextInt();
+       obj.result(num);
+       }
+       else if(n==2)
+       {
+       num1=sc.nextInt();
+       num2=sc.nextInt();
+       
+       obj.result(num1,num2);
+    }
+    else if(n==3)
+    {
+        num1=sc.nextInt();
+        num2=sc.nextInt();
+        num3=sc.nextInt();
+        obj.result(num1,num2,num3);
+    }
+    else 
+    System.out.println("The number entered is invalid");
+    }
+}    
