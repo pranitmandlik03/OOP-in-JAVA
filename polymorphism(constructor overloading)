@@ -1,0 +1,49 @@
+//Constructor overloading
+//compiletime polymorphism
+class result
+{
+    int x,y,z;
+    result(int a, int b, int c)
+    {
+        System.out.println("The first method with withno default values gets called");
+        x=a;
+        b=y;
+        z=c;
+    }
+    result(int n, int m)
+    {
+        System.out.println("The second mehtod with 2 default values gets called");
+        x=n;
+        y=m;
+        z=24;
+
+
+    }
+    result(int p)
+    {
+        System.out.println("Third method with 1 default values gets called ");
+        x=p;
+        y=34;
+        z=12;
+
+    }
+    void calcn()
+    {
+        int add,sub;
+        add=x+y+z;
+        sub=x-y-z;
+        System.out.println("Addition= "+add);
+        System.out.println("Substraction= "+sub);
+
+    }
+}
+public class polydemo2
+{
+    public static void main(String[] args) 
+    {
+        result obj=new result(2);
+        obj.calcn();
+
+        
+    }
+}
