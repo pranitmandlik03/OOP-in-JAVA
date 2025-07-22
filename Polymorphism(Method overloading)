@@ -1,0 +1,50 @@
+//method overloading
+class student
+{
+    void result(int n)
+    {
+        System.out.println("Cheking odd even");
+        System.out.println("The number is= "+n);
+        if(n%2==0)
+        {
+            System.out.println("Number is even");
+
+        }
+        else 
+        System.out.println("Number is odd");
+    }
+    void result(int a, int b)
+    {
+        int add,sub;
+        System.out.println("Finding Addition and average");
+        System.out.println("The numbers that are entered are= "+a+" "+b);
+         add=a+b;
+         sub=a-b;
+        System.out.println("Addition= "+add);
+        System.out.println("Substraction= "+sub);
+    }
+    void result(int x, int y, int z)
+    {
+        int add;
+        double avg;
+        System.out.println("Finding Adition and average of the three numbers");
+        System.out.println("Thenumbers are= "+x+" "+y+" "+z);
+        add=x+y+z;
+        avg=(double)add/3;
+        System.out.println("Addition of the threee numbers= "+add);
+        System.out.println("Average of the three numbers is= "+avg);
+
+    }
+
+}
+public class polydemo1
+{
+    public static void main(String args[])
+    {
+        student obj=new student();
+        obj.result(2);
+        //if we pass two numbers then the second method gets called
+        // if we pass three numbers then the third method gets called 
+    }
+    
+}
